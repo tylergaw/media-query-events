@@ -24,7 +24,6 @@
                 // to check the type of object each rule was
                 // http://stackoverflow.com/a/332429/368634
                 if (rules[j].constructor === CSSMediaRule) {
-
                     mqls['mql' + j] = window.matchMedia(rules[j].media.mediaText);
                     mqls['mql' + j].addListener(mediaChange);
                     mediaChange(mqls['mql' + j]);
