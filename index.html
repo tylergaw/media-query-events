@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Media Query Events Example</title>
+        <meta name="description" content="A demo of mq-events, a way to bind event listeners to all of a pages media queries">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="condition" class="unmet"></div>
+        <header role="banner">
+            <h1>Media Query Events</h1>
+            <h2>When shit happens to your CSS, have your JS know about it.</h2>
+        </header>
+        <section role="main">
+            <h1>Who Is Your Daddy and What Does He Do?</h1>
+            <h2>Putting this content here to give the impression that this is a real page.</h2>
+            <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</p>
+            <p>Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
+            <p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.</p>
+        </section>
+        <footer role="contentinfo">
+            <a href="http://twitter.com/thegaw">Follow @thegaw</a>
+            <a href="http://lab.tylergaw.com">More fun things here</a>
+        </footer>
+
+        <script src="js/mq-events.js"></script>
+        <script>
+            var msg = document.getElementById('condition'),
+                handleMediaChange = function (mql) {
+
+                    // For some reason Firefox has trouble always running this code.
+                    // The console.log seems to help it.
+                    // TODO: Figure out what the hell that's all about
+                    console.log();
+
+                    if (mql.matches) {
+                        msg.setAttribute('class', 'met');
+                        msg.innerHTML = 'The condition "' + mql.media + '" was met.';
+                    }
+                    else {
+                        msg.setAttribute('class', 'unmet');
+                        msg.innerHTML = 'The condition "' + mql.media + '" was not met.';
+                    }
+                };
+
+            mqEvents(handleMediaChange);
+        </script>
+    </body>
+</html>
