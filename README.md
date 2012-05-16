@@ -29,7 +29,7 @@ Pass it a single function parameter that will run each time a MatchMedia event f
 
 ### Reference
 
-document.styleSheets - https://developer.mozilla.org/en/Document_Object_Model_(DOM)/document.styleSheets
-window.matchMedia - https://developer.mozilla.org/en/DOM/window.matchMedia
-CSSMediaRule - https://developer.mozilla.org/en/DOM/cssMediaRule
-Get the name of an object type - http://stackoverflow.com/questions/332422/how-do-i-get-the-name-of-an-objects-type-in-javascript
+- document.styleSheets - https://developer.mozilla.org/en/Document_Object_Model_(DOM)/document.styleSheets
+- window.matchMedia - https://developer.mozilla.org/en/DOM/window.matchMedia
+- CSSMediaRule - https://developer.mozilla.org/en/DOM/cssMediaRule
+- Get the name of an object type - http://stackoverflow.com/questions/332422/how-do-i-get-the-name-of-an-objects-type-in-javascript
