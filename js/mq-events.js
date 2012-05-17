@@ -24,9 +24,12 @@
                 // to check the type of object each rule was
                 // http://stackoverflow.com/a/332429/368634
                 if (rules[j].constructor === CSSMediaRule) {
-                    mqls['mql' + j] = window.matchMedia(rules[j].media.mediaText);
-                    mqls['mql' + j].addListener(mediaChange);
-                    mediaChange(mqls['mql' + j]);
+                    // Use the i in the name or else multiple
+                    // stylesheets may cause members to be
+                    // overwritten.
+                    mqls['mql' + i + '-' + j] = window.matchMedia(rules[j].media.mediaText);
+                    mqls['mql' + i + '-' + j].addListener(mediaChange);
+                    mediaChange(mqls['mql' + i + '-' + j]);
                 }
             }
         }
