@@ -56,6 +56,26 @@ a:hover {
     background-color: yellow;
 }
 
+#condition.narrow {
+    background-color: #2CA6BE;
+}
+
+#condition.medium {
+    background-color: #F30FF3;
+}
+
+#condition.large {
+    background-color: #F2570F;
+}
+
+#condition.x-large {
+    background-color: #3C0FF2;
+}
+
+#condition.short {
+    background-color: #F20F0F;
+}
+
 [role="banner"],
 [role="main"],
 [role="contentinfo"] {

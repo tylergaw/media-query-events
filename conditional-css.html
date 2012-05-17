@@ -40,26 +40,31 @@
                 // you could take very specific actions based on the screen size.
                 screenSizeActions = {
                     'narrow': function () {
-                        console.log('The screen size is pretty narrow');
+                        msg.setAttribute('class', 'narrow');
+                        msg.innerHTML = 'The screen size is pretty narrow';
                     },
 
                     'medium': function () {
-                        console.log('The screen size is medium, do some medium shit');
+                        msg.setAttribute('class', 'medium');
+                        msg.innerHTML = 'The screen size is medium, do some medium shit';
                     },
 
                     'large': function () {
-                        console.log('The screen size is large, load some huge PNGs');
+                        msg.setAttribute('class', 'large');
+                        msg.innerHTML = 'The screen size is large, load some huge PNGs';
                     },
 
                     'x-large': function () {
-                        console.log('The screen size is extra large. You got a big monitor');
+                        msg.setAttribute('class', 'x-large');
+                        msg.innerHTML = 'The screen size is extra large. You got a big monitor yo!';
                     },
 
                     'short': function () {
-                        console.log('Hey Shorty, the screen is just like you.');
+                        msg.setAttribute('class', 'short');
+                        msg.innerHTML = 'Hey Shorty, the screen is just like you.';
                     }
                 },
-                
+
                 handleMediaChange = function (mql) {
                     var screenSize = getScreenSize();
 
